@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 100%;
+  line-height: 2;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+input,
+textarea {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit; /* no idea what this is or does*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  font-family: "Anton", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  padding-bottom: 1em;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* navigation (using flexbox) */
+.page-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  list-style-type: none;
+}
+
+.page-nav li {
+  flex: 1 1 50%;
+  display: flex;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.page-nav a {
+  padding: 15px 10px;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.page-nav a:hover {
+  background: #000;
+  color: rgb(238, 16, 16);
+}
+@media screen and (min-width: 760px) {
+  .page-nav ul {
+    flex-wrap: nowrap;
+  }
+  .page-nav li {
+    flex: 1 1 25%;
+  }
+}
+
+/* page header */
+.page-header {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.35px;
+  min-height: 40vh;
+  background-image: url(../done_wings.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: #ff0000;
+  background-attachment: fixed; /* fixes the hero image to the top of the page */
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+}
+
+.header-content {
+  max-width: 500px;
+  font-size: 1.35rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+}
+
+.header-content a {
+  display: inline-block;
+  color: #ffff;
+  border-radius: 0.2em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* main layout */
+.container-content {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  max-width: 600px;
+}
+
+.Social-Media {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: Black;
+  height: 20vh;
+  color: white;
+  text-align: center;
+}
+
+/* styling for the section content */
+
+.container-content h2 {
+  text-align: center;
+}
+
+/* background colours for sections */
+nav {
+  background-color: #000;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+
+.about-me {
+  background-color: #000;
+  color: white;
+}
+
+.about-me img {
+  border-radius: 50%;
+  float: right;
+}
+
+#images {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.work-experience {
+  table-layout: auto;
+}
+
+/* image gallery media queries and size overrides */
+
+.image-gallery .container-content {
+  max-width: 1200px;
+}
+
+.image-gallery h2 {
+  text-align: center;
+}
+
+.image-gallery .an-image {
+  margin: 0;
+}
+
+.image-gallery .image-caption {
+  padding: 6px 0 30px 0;
+}
+
+/* .an-image {
+  border: red 1px solid;
+} */
+
+@media screen and (min-width: 750px) {
+  .image-gallery .image-container {
+    display: flex;
+  }
+  .image-gallery .an-image {
+    flex: 33%;
+    padding: 20px;
+    background: #b22222;
+  }
+  .image-gallery .an-image + .an-image {
+    margin-left: 20px;
+  }
+}
+
+/* form styling */
+form label {
+  display: block;
+  padding-bottom: 0.2em;
+  padding-top: 1em;
+}
+
+form input,
+form textarea {
+  padding: 0.4em 0.3em;
+  font-size: 1.5em;
+  border: 1px solid #bbb;
+  border-radius: 0.2em;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+form input[type="submit"] {
+  min-width: 0;
+  background-color: #b22222;
+  border: 0;
+  border-radius: 0.2em;
+  padding: 13px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.2s ease;
+  transition-delay: 250ms;
+  transition-property: margin-right;
+}
+
+form input[type="submit"]:hover {
+  background-color: #c30;
+}
+
+/* footer */
+footer {
+  background-color: #000;
+  color: white;
+  height: 50%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.footer-content a {
+  color: #fff;
+}
